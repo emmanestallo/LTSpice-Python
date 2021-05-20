@@ -7,7 +7,10 @@ txt_file = 'LPF.txt'
 Res1_orig = 'Res1=1k'
 Cap1_orig = 'Cap1=0.1u'
 
+#we can store all values in a list and just iterate using f'string'
 for i in range(2):
+
+    #read and write in binary to disregard whitespaces
     with open(txt_file, 'rb') as file:
         data_orig = file.read()
         data_temp = data_orig.replace(Res1_orig.encode('ascii'), 'Res1=10k'.encode('ascii'))\
