@@ -1,0 +1,10 @@
+* D:\emman\Codes\Circuits - Practice\LPF.asc
+V1 In 0 SINE(0 5 {Freq1})
+R1 In Out {Res1}
+C1 Out 0 {Cap1}
+.tran 5m
+.param Res1=1k Cap1=0.1u
+.param Freq1=1k
+.save V(in) V(out)
+.backanno
+.end
